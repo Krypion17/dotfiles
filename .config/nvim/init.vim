@@ -16,6 +16,7 @@ let mapleader = ";"
 
 map <F8> :NERDTreeToggle<CR>
 map <c-y> "+y
+map <c-p> "+p
 map <c-s> <c-w><
 map <c-a> <c-w>>
 map <c-k> <c-w>+
