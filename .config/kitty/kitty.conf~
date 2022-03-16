@@ -1,0 +1,16 @@
+# Colors
+include colors.conf
+
+# Fonts
+font_family Hack Nerd Font
+font_size 12
+
+# Tabs
+tab_bar_edge top
+tab_bar_style powerline 
+tab_powerline_style angled 
+
+# Cursor
+cursor_shape underline
+
+update_check_interval 0
