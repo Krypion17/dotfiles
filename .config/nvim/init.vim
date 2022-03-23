@@ -9,12 +9,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
+Plug 'psliwka/vim-smoothie'
   
 call plug#end()
 
 let mapleader = ";"
 
 map <F8> :NERDTreeToggle<CR>
+map <leader>j ddp
+map <leader>k ddkkp
 map <c-y> "+y
 map <c-p> "+p
 map <c-s> <c-w><
@@ -22,8 +25,22 @@ map <c-a> <c-w>>
 map <c-k> <c-w>+
 map <c-m> <c-w>-
 map <leader><cr> :source %<cr>
-tnoremap <leader><Esc> <c-\><c-n>
+
+tnoremap <Esc> <c-\><c-n>
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+noremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
 
 autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -55,10 +72,11 @@ call SetupCommandAlias("nt","NERDTree")
 
 set updatetime=300
 set nu
-set fillchars=vert:\▏
+set fillchars=vert:\┃
 set mouse=a
 
 let g:indentLine_char = '▏'
+let g:NERDTreeWinSize = 35
 
 filetype indent on
 set shiftwidth=4
