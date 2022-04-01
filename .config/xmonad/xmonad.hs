@@ -36,5 +36,5 @@ main = xmonad $ docks $ defaults
       ("<XF86AudioRaiseVolume>", spawn "amixer -D pulse sset Master 5%+"),
       ("M-s", sendMessage ToggleStruts),
       ("M-e", spawn "eww daemon"),
-      ("M-S-e", spawn "pkill eww")
+      ("M-S-e", spawn "eww kill")
     ]
