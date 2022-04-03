@@ -1,0 +1,9 @@
+(defpoll title
+  :interval "500ms"
+  :initial "Home"
+  "./scripts/title.sh")
+
+(defwidget titlewid []
+  (box
+    :class "widgets"
+    " ${title} "))

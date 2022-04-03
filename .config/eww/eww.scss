@@ -1,5 +1,5 @@
 * {
-    font-family: "Monofur Nerd Font Mono";
+    font-family: "SpaceMono Nerd Font";
 }
 
 window {
@@ -7,9 +7,18 @@ window {
 }
 
 .bar {
-    border-radius: 2;
+    border-radius: 2px;
 }
 
-.time {
+.widgets {
     background-color: rgba(10, 10, 10, 255);
+    padding: 1px;
+    padding-left: 10px;
+    border-radius: 18px;
+    font-size: 15px;
+    margin: 3px;
+}
+
+.icon {
+    font-size: 27px;
 }

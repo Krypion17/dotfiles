@@ -1,12 +1,26 @@
 (defpoll time
   :interval "1s"
-  "date +%I:%M%p")
+  :initial "time"
+  "./scripts/time.sh")
 
-(defpoll icon
+(defpoll tooltip
   :interval "1s"
-  "~/.config/eww/scripts/time.sh")
+  :initial "full time"
+  "./scripts/time.sh --full-time")
+
+(defpoll icontime
+  :interval "1s"
+  :initial "e"
+  "./scripts/time.sh --icon")
 
 (defwidget timewid []
   (box
-    :class "time"
-    "${icon} ${time}"))
+    :tooltip "${tooltip}"
+    :class "widgets"
+    :halign "end"
+    (label
+      :class "icon"
+      :text "${icontime}"
+      :limit-width 1
+      :width 1)
+    "${time} "))
