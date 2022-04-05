@@ -5,5 +5,5 @@
 
 (defwidget titlewid []
   (box
-    :class "widgets"
+    :class "title"
     " ${title}  "))

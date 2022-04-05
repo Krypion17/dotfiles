@@ -1,13 +1,6 @@
-* {
-    font-family: "SpaceMono Nerd Font";
-}
-
 window {
     background-color: rgba(0, 0, 0, 0);
-}
-
-.bar {
-    border-radius: 2px;
+    font-family: "SpaceMono Nerd Font";
 }
 
 .widgets {
@@ -23,4 +16,15 @@ window {
 .icon {
     font-size: 27px;
     font-weight: normal;
+}
+
+.title {
+    background-color: rgba(10, 10, 10, 255);
+    padding: 1px;
+    padding-left: 15px;
+    border-radius: 18px;
+    font-size: 15px;
+    margin: 3px;
+    font-weight: bold;
+    font-family: "Space Mono";
 }
