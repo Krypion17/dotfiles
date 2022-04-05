@@ -1,8 +1,8 @@
 #!/bin/bash
 
-title=watch xdotool getwindowfocus getwindowname
+title=$(xdotool getwindowfocus getwindowname)
 
-if [[ $title == null ]] ; then
+if [[ ${#title} < 2 ]] ; then
     echo "Home"
 else
     echo $title

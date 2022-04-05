@@ -1,6 +1,7 @@
 (include "./bar/widgets/time.yuck")
 (include "./bar/widgets/title.yuck")
 (include "./bar/widgets/battery.yuck")
+(include "./bar/widgets/volume.yuck")
 
 (defwindow bar
   :monitor 0
@@ -20,6 +21,7 @@
   (box 
   :halign "end"
   :space-evenly false
+  (volumewid)
   (batterywid)
   (timewid)))
 )

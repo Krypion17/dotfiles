@@ -17,10 +17,12 @@
   (box
     :tooltip "${tooltip}"
     :class "widgets"
-    :halign "end"
+    :space-evenly false
+    :spacing 15
     (label
       :class "icon"
       :text "${icontime}"
+      :halign "start"
       :limit-width 1
       :width 1)
     "${time} "))
