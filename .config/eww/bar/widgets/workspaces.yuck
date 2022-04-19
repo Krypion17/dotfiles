@@ -1,0 +1,40 @@
+(defvar class1
+  "clickable")
+
+(defvar class2
+  "clickable")
+
+(defvar class3
+  "clickable")
+
+(defvar class4
+  "clickable")
+
+(defvar class5
+  "clickable")
+
+(defwidget workspaceswid []
+  (box
+    :space-evenly false
+    :spacing 10
+    (button
+      :class "${class1}"
+      :onclick "./scripts/css/click.sh 1"
+      "1")
+    (button
+      :class "${class2}"
+      :onclick "./scripts/css/click.sh 2"
+      "2")
+    (button
+      :class "${class3}"
+      :onclick "./scripts/css/click.sh 3"
+      "3")
+    (button
+      :class "${class4}"
+      :onclick "./scripts/css/click.sh 4"
+      "4")
+    (button
+      :class "${class5}"
+      :onclick "./scripts/css/click.sh 5"
+      "5")
+    ))

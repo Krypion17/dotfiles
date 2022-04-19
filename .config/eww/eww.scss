@@ -1,16 +1,40 @@
+* {
+    min-height: 25px;
+    all: unset;
+    color: #d1d1d1;
+}
+
 window {
     background-color: rgba(0, 0, 0, 0);
     font-family: "SpaceMono Nerd Font";
 }
 
-.widgets {
-    background-color: rgba(10, 10, 10, 255);
-    padding: 1px;
-    padding-left: 15px;
-    border-radius: 18px;
+.widgets, .clickable, .clickable-active, .title {
+    background-color: #222222;
+    padding: 0 20px 0 20px;
+    border-radius: 20px;
     font-size: 15px;
-    margin: 3px;
+    /* margin: 5px 5px; */
     font-weight: bold;
+}
+
+.title {
+    padding: 10px 20px 10px 20px;
+    font-family: "Space Mono";
+}
+
+
+.clickable-active:hover, .clickable:hover {
+    background-color: #222222;
+    background-repeat: no-repeat;
+}
+
+.clickable-active, .clickable:active {
+    animation-name: ripple;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    background-repeat: no-repeat;
 }
 
 .icon {
@@ -18,13 +42,37 @@ window {
     font-weight: normal;
 }
 
-.title {
-    background-color: rgba(10, 10, 10, 255);
-    padding: 1px;
-    padding-left: 15px;
-    border-radius: 18px;
-    font-size: 15px;
-    margin: 3px;
-    font-weight: bold;
-    font-family: "Space Mono";
+.container {
+    background-color: #111111;
+    padding: 8px;
+    padding-top: 5px;
+}
+
+.round {
+    background-color: rgba(0, 0, 0, 0);
+    min-height: 25px;
+    min-width: 25px;
+}
+
+@keyframes ripple {
+    from {
+	background-image: radial-gradient(circle, #5a5a5a 88%, transparent 20%);
+	background-size: 0%;
+	background-position: center;
+    }
+
+    95% {
+	background-image: radial-gradient(circle, #5a5a5a 88%, transparent 20%);
+	background-size: 120%;
+	background-position: center;
+    }
+
+    99% {
+	background-color: #5a5a5a;
+    }
+
+    to {
+	background-image: none;
+	background-color: #222222;
+    }
 }

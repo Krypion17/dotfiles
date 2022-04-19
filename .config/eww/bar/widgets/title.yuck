@@ -1,9 +1,12 @@
 (defpoll title
   :interval "1s"
   :initial "Home"
-  "./scripts/title.sh")
+  "./scripts/widgets/title.sh")
 
 (defwidget titlewid []
   (box
     :class "title"
-    " ${title}  "))
+    :space-evenly false
+    (label
+      :limit-width 120
+      :text "${title}")))

@@ -1,17 +1,17 @@
 (defpoll time
   :interval "1s"
   :initial "time"
-  "./scripts/time.sh")
+  "./scripts/widgets/time.sh")
 
 (defpoll tooltip
   :interval "1s"
   :initial "full time"
-  "./scripts/time.sh --full-time")
+  "./scripts/widgets/time.sh --full-time")
 
 (defpoll icontime
   :interval "1s"
   :initial "e"
-  "./scripts/time.sh --icon")
+  "./scripts/widgets/time.sh --icon")
 
 (defwidget timewid []
   (box
@@ -25,4 +25,4 @@
       :halign "start"
       :limit-width 1
       :width 1)
-    "${time} "))
+    "${time}"))

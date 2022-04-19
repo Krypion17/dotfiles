@@ -1,23 +1,23 @@
 (defpoll battery
   :interval "1s"
-  "./scripts/battery.sh")
+  "./scripts/widgets/battery.sh")
 
 (defpoll iconbat
   :interval "1s"
-  "./scripts/battery.sh --icon")
+  "./scripts/widgets/battery.sh --icon")
 
 (defpoll colorbat
   :interval "1s"
-  "./scripts/battery.sh --color")
+  "./scripts/widgets/battery.sh --color")
 
 (defwidget batterywid []
   (box
     :class "widgets"
     :halign "end"
     :space-evenly false
-    :spacing 10
+    :spacing 13
     (label
       :class "icon"
       :style "color: ${colorbat};"
       :text "${iconbat}")
-    "${battery}% "))
+    "${battery}%"))

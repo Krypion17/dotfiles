@@ -1,19 +1,23 @@
-(defpoll volume
-  :interval "500ms"
-  :initial "0%"
-  "./scripts/volume.sh")
+(defvar volume
+  "30")
 
-(defpoll iconvol
-  :interval "1s"
-  :initial "e"
-  "./scripts/volume.sh --icon")
+(defvar iconvol
+  "奄")
+
+(defvar classvol
+  "clickable")
 
 (defwidget volumewid []
-  (box
-    :class "widgets"
-    :space-evenly false
-    :spacing 10
-    (label
-      :class "icon"
-      :text "${iconvol}")
-    "${volume} "))
+  (button
+    :class "${classvol}"
+    :style "padding: 0;"
+    :onclick "./scripts/css/click.sh vol"
+    (box
+      :class "widgets"
+      :style "background-color: rgba(0, 0, 0, 0); margin: 0;"
+      :space-evenly false
+      :spacing 10
+      (label
+        :class "icon"
+        :text "${iconvol}")
+      "${volume}%")))
