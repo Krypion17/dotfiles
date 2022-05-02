@@ -3,9 +3,9 @@
 pcall(require, "luarocks.loader")
 
 -- Import my stuff
---local mydock = require("theme/bar/widgets/mydock")
+-- local mydock = require("theme/bar/widgets/mydock")
 local clock = require("theme/bar/widgets/clock")
-local taglist = require("theme/bar/widgets/taglist")
+-- local taglist = require("theme/bar/widgets/taglist")
 
 -- Standard awesome library
 local gears = require("gears")
@@ -638,12 +638,11 @@ beautiful.wibar_ontop = true
 
 awful.placement.bottom_right(clock, {margins = {top = 4,bottom = 4}})
 
-awful.placement.right(taglist[1], {margins = {top = 4,bottom = 4}})
+-- awful.placement.right(taglist[1], {margins = {top = 4,bottom = 4}})
 
-awful.placement.right(taglist[2])
+-- awful.placement.right(taglist[2])
 
 
 -- awful.placement.bottom(mydock, {margins = {top = 4,bottom = 4}})
 
 require("theme.bar.bar")
-

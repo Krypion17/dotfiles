@@ -13,16 +13,59 @@
   :initial "e"
   "./scripts/widgets/time.sh --icon")
 
+(defvar classcal
+  "clickable")
+
+(defvar calenabled
+  false)
+
 (defwidget timewid []
+  (button
+    :class "${classcal}"
+    :style "padding: 0;"
+    :onclick "./scripts/css/click.sh cal ${calenabled}"
+    (box
+      :tooltip "${tooltip}"
+      :class "widgets"
+      :style "background-color: rgba(0, 0, 0, 0); margin: 0;"
+      :space-evenly false
+      :spacing 15
+      (label
+        :class "icon"
+        :text "${icontime}"
+        :halign "start"
+        :limit-width 1
+        :width 1)
+      "${time}")))
+
+(defwindow calendarpop
+  :monitor 0
+  :geometry (geometry
+              :x "0"
+              :y "56px"
+              :width "300px"
+              :anchor "top right")
+  :stacking "fg"
+  :wm-ignore true
+  :window-type "dialog"
+(revealer
+  :transition "slidedown"
+  :reveal "${calenabled}"
+  :duration "0.5s"
   (box
-    :tooltip "${tooltip}"
-    :class "widgets"
     :space-evenly false
-    :spacing 15
-    (label
-      :class "icon"
-      :text "${icontime}"
-      :halign "start"
-      :limit-width 1
-      :width 1)
-    "${time}"))
+    :halign "end"
+    (box :halign "end" :class "round" :style "border-radius: 0 25px 0 0; box-shadow: 0 -30px 0 0 #111111;")
+    (box
+      :class "container"
+      :style "border-radius: 0 0 20px 20px;"
+      (box
+        :class "widgets"
+        :style "padding: 0; min-width: 270px;"
+        (calendar
+          :show-details true)))
+    (box :halign "end" :class "round" :style "border-radius: 25px 0 0 0; box-shadow: 0 -30px 0 0 #111111;")
+    )
+  )
+)
+

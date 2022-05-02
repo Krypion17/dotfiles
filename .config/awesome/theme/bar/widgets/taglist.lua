@@ -1,4 +1,4 @@
-local awful = require("awful")
+--[[local awful = require("awful")
 local wibox = require("wibox")
 local gears = require("gears")
 
@@ -84,9 +84,9 @@ awful.screen.connect_for_each_screen(function (s)
         fg = "#c8cdcc",
         width = 50,
         height = 320,
-        --[[ shape = function(cr, width, height) 
+        shape = function(cr, width, height) 
             gears.shape.rounded_rect(cr, width, height, 10)
-        end, --]]
+        end,
         opacity = 1,
         ontop = true,
         widget = theTaglist
@@ -101,4 +101,4 @@ awful.screen.connect_for_each_screen(function (s)
     end)
 end)
 
-return {taglist, taglistDetect}
+return {taglist, taglistDetect}]]--

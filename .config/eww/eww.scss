@@ -1,3 +1,7 @@
+@use "./css/volumepop.scss";
+@use "./css/widgets.scss";
+@use "./css/calendar.scss";
+
 * {
     min-height: 25px;
     all: unset;
@@ -7,39 +11,6 @@
 window {
     background-color: rgba(0, 0, 0, 0);
     font-family: "SpaceMono Nerd Font";
-}
-
-.widgets, .clickable, .clickable-active, .title {
-    background-color: #222222;
-    padding: 0 20px 0 20px;
-    border-radius: 20px;
-    font-size: 15px;
-    /* margin: 5px 5px; */
-    font-weight: bold;
-}
-
-.title {
-    padding: 10px 20px 10px 20px;
-    font-family: "Space Mono";
-}
-
-
-.clickable-active:hover, .clickable:hover {
-    background-color: #222222;
-    background-repeat: no-repeat;
-}
-
-.clickable-active, .clickable:active {
-    animation-name: ripple;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    background-repeat: no-repeat;
-}
-
-.icon {
-    font-size: 27px;
-    font-weight: normal;
 }
 
 .container {
@@ -54,25 +25,3 @@ window {
     min-width: 25px;
 }
 
-@keyframes ripple {
-    from {
-	background-image: radial-gradient(circle, #5a5a5a 88%, transparent 20%);
-	background-size: 0%;
-	background-position: center;
-    }
-
-    95% {
-	background-image: radial-gradient(circle, #5a5a5a 88%, transparent 20%);
-	background-size: 120%;
-	background-position: center;
-    }
-
-    99% {
-	background-color: #5a5a5a;
-    }
-
-    to {
-	background-image: none;
-	background-color: #222222;
-    }
-}

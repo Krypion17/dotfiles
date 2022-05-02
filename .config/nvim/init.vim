@@ -10,6 +10,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
 Plug 'psliwka/vim-smoothie'
+Plug 'elkowar/yuck.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'neovimhaskell/haskell-vim'
   
 call plug#end()
 
@@ -25,6 +29,7 @@ map <c-a> <c-w>>
 map <c-k> <c-w>+
 map <c-m> <c-w>-
 map <leader><cr> :source %<cr>
+map <Space> :noh<cr>
 
 tnoremap <Esc> <c-\><c-n>
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
@@ -75,10 +80,15 @@ set nu
 set fillchars=vert:\┃
 set mouse=a
 
-let g:indentLine_char = '▏'
+let g:indentLine_char = '│' "▏'
 let g:NERDTreeWinSize = 35
+let g:airline_powerline_fonts = 1
+let g:airline_theme='deus'
+let g:haskell_indent_if = 0
 
+syntax on
 filetype indent on
 set shiftwidth=4
+set expandtab
 
 colorscheme natural

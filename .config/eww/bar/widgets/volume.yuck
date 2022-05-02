@@ -1,5 +1,5 @@
 (defvar volume
-  "30")
+  30)
 
 (defvar iconvol
   "奄")
@@ -7,11 +7,15 @@
 (defvar classvol
   "clickable")
 
+(defvar enabledvol
+  false)
+
 (defwidget volumewid []
   (button
     :class "${classvol}"
     :style "padding: 0;"
-    :onclick "./scripts/css/click.sh vol"
+    :onclick "./scripts/css/click.sh vol ${enabledvol}"
+    :timeout "1s"
     (box
       :class "widgets"
       :style "background-color: rgba(0, 0, 0, 0); margin: 0;"
@@ -21,3 +25,44 @@
         :class "icon"
         :text "${iconvol}")
       "${volume}%")))
+
+(defwindow volumepop
+  :monitor 0
+  :geometry (geometry
+              :x "0"
+              :y "56px"
+              :width "270px"
+              :anchor "top right")
+  :stacking "fg"
+  :wm-ignore true
+  :window-type "dialog"
+(revealer
+  :transition "slidedown"
+  :reveal enabledvol
+  :duration "200ms"
+  (box
+    :space-evenly false
+    :halign "end"
+    (box :halign "end" :class "round" :style "border-radius: 0 25px 0 0; box-shadow: 0 -25px 0 0 #111111;")
+    (box
+      :class "container"
+      :style "border-radius: 0 0 25px 25px;"
+      (box
+        :space-evenly false
+        :spacing 30
+        :class "widgets"
+      (label
+        :class "icon"
+        :style "padding-left: 10px;"
+        :text "${iconvol}")
+      (scale
+        :orientation "h"
+        :active true
+        :value volume
+        :min 0
+        :max 100
+        :marks "1"
+        :timeout "10s"
+        :onchange "amixer -D pulse sset Master {}% && sleep 1 && ./scripts/widgets/volume.sh")))
+  (box :halign "end" :class "round" :style "border-radius: 25px 0 0 0; box-shadow: 0 -25px 0 0 #111111;")
+  )))

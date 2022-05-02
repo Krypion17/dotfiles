@@ -12,3 +12,10 @@ hi! Error cterm=underline ctermbg=NONE ctermfg=1
 hi! Todo ctermbg=NONE ctermfg=3 cterm=underline
 hi! VertSplit ctermbg=7 ctermfg=0
 hi! cursorline ctermbg=8 cterm=NONE
+
+hi! CocHintFloat ctermbg=8 ctermfg=7
+hi! CocErrorFloat ctermfg=7
+hi! CocWarnFloat ctermbg=8 ctermfg=7
+hi! CocWarningFloat ctermbg=8 ctermfg=7
+hi! CocFloating ctermbg=8 ctermfg=7
+hi! CocCodeLens ctermbg=8 ctermfg=7

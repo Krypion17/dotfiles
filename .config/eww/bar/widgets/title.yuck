@@ -8,5 +8,5 @@
     :class "title"
     :space-evenly false
     (label
-      :limit-width 120
+      :limit-width 100
       :text "${title}")))

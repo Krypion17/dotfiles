@@ -1,0 +1,12 @@
+calendar {
+    padding: 5px;
+}
+
+calendar:selected {
+    background-color: #111111;
+    border-radius: 20px
+}
+
+calendar:indeterminate {
+    color: #818181;
+}

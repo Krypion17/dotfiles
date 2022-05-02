@@ -1,5 +1,41 @@
 {
+    "languageserver": {
+      "haskell": {
+        "command": "haskell-language-server-wrapper",
+        "args": [
+          "--lsp"
+        ],
+        "rootPatterns": [
+          ".stack.yaml",
+          ".hie-bios",
+          "BUILD.bazel",
+          "cabal.config",
+          "package.yaml"
+        ],
+        "filetypes": [
+          "hs",
+          "lhs",
+          "haskell"
+        ],
+        "initializationOptions": {
+          "languageServerHaskell": {
+            "hlintOn": true,
+            "maxNumberOfProblems": 10,
+            "completionSnippetsOn": true
+          }
+        }
+      }
+    },
     "rust-analyzer.enable": true,
     "coc.source.around.firstMatch": false,
-    "coc.source.buffer.firstMatch": false
+    "coc.source.buffer.firstMatch": false,
+    "hover.floatConfig": {
+	"highlight": "CocFloating"
+    },
+    "diagnostic.floatConfig": {
+	"highlight": "CocFloating"
+    },
+    "suggest.floatConfig": {
+	"highlight": "CocFloating"
+    }
 }

@@ -1,0 +1,11 @@
+(defvar classpow
+  "clickable")
+
+(defwidget powerwid []
+  (button
+    :class "${classpow}"
+    :onclick "./scripts/css/click.sh power"
+    (label
+      :class "icon"
+      :style "font-size: 20px; padding-right: 5px;"
+      :text "")))
