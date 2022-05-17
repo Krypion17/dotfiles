@@ -27,15 +27,44 @@
       }
     },
     "rust-analyzer.enable": true,
+    "suggest.completionItemKindLabels": {
+        "method": "  ",
+        "function": "  ",
+        "variable": "[]",
+        "field": "  ",
+        "typeParameter": "<>",
+        "constant": "  ",
+        "class": "  ",
+        "interface": "  ",
+        "struct": "  ",
+        "event": "  ",
+        "operator": "  ",
+        "module": "  ",
+        "property": "  ",
+        "enum": "  ",
+        "reference": "  ",
+        "keyword": "  ",
+        "file": "  ",
+        "folder": " ﱮ ",
+        "color": "  ",
+        "unit": "  ",
+        "snippet": "  ",
+        "text": "  ",
+        "constructor": "  ",
+        "value": "  ",
+        "enumMember": "  "
+    },
     "coc.source.around.firstMatch": false,
-    "coc.source.buffer.firstMatch": false,
     "hover.floatConfig": {
-	"highlight": "CocFloating"
+	"highlight": "Float",
+        "border": true
     },
     "diagnostic.floatConfig": {
-	"highlight": "CocFloating"
+	"highlight": "Float",
+        "border": true
     },
     "suggest.floatConfig": {
-	"highlight": "CocFloating"
+	"highlight": "Float",
+        "border": true
     }
 }
