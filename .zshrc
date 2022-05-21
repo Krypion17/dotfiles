@@ -109,11 +109,17 @@ source $ZSH/oh-my-zsh.sh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias go="exit"
 alias neofetch="neofetch --ascii_distro"
+# alias neofetch="neofetch --ascii_distro arch | sed 's/Kubuntu 21.10/Arch Linux/ s/dpkg/pacman/s/ubuntu/arch/'"
 alias updoot="sudo apt-fast update && sudo apt-fast upgrade && flatpak update"
 alias img="kitty +kitten icat"
+# alias frick="sudo $(fc -ln -1)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f "/home/krypion17/.ghcup/env" ] && source "/home/krypion17/.ghcup/env" # ghcup-env
 export PATH=/home/krypion17/.local/bin:$PATH
+
+nvim () { 
+    kitty @ set-spacing padding=2 && /home/krypion17/.local/bin/nvim $@ && kitty @ set-spacing padding=default
+}

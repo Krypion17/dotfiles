@@ -44,7 +44,7 @@
   local blue='#57C7FF'
   local magenta='#FF6AC1'
   local cyan='#9AEDFE'
-  local white='#C5CDCB' #'#F1F1F0'
+  local white='#c5c5c5' #'#F1F1F0'
   local green='#22df6f'
 
   # Left prompt segments.
@@ -83,7 +83,7 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Magenta prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$white
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$grey
   # Default prompt symbol.
