@@ -1,9 +1,11 @@
+@import "./variables.scss";
+
 calendar {
     padding: 5px;
 }
 
 calendar:selected {
-    background-color: #111111;
+    background-color: $HoverBg;
     border-radius: 20px
 }
 

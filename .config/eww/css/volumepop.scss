@@ -1,19 +1,20 @@
+@import "./variables.scss";
+
 scale {
     min-height: 10px;
     min-width: 175px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
 }
 
 highlight {
     min-height: 10px;
-    background-color: #d1d1d1;
+    background-image: linear-gradient(to right, #88aabb, #8888bb);
     border-radius: 8px 0 0 8px;
-    padding-right: 7px;
 }
 
 trough {
     min-height: 10px;
-    background-color: #a1a1a1;
+    background-color: $Foreground;
     border-radius: 8px;
 }
 
@@ -21,13 +22,6 @@ slider {
     min-height: 15px;
     min-width: 15px;
     border-color: #8888bb;
-    box-shadow: 0 0 0 0 #ff0000;
     border-radius: 50%;
-    margin-left: 6px;
     background-color: #8888bb;
-}
-
-mark {
-    border-color: red;
-    color: red;
 }

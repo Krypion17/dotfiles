@@ -43,7 +43,7 @@
   (box
     :space-evenly false
     :halign "end"
-    (box :halign "end" :class "round" :style "border-radius: 0 25px 0 0; box-shadow: 0 -25px 0 0 #111111;")
+    (box :halign "end" :class "round" :style "border-radius: 0 25px 0 0;")
     (box
       :class "container"
       :style "border-radius: 0 0 25px 25px;"
@@ -64,5 +64,5 @@
         :marks "1"
         :timeout "10s"
         :onchange "amixer -D pulse sset Master {}% && sleep 1 && ./scripts/widgets/volume.sh")))
-  (box :halign "end" :class "round" :style "border-radius: 25px 0 0 0; box-shadow: 0 -25px 0 0 #111111;")
+  (box :halign "end" :class "round" :style "border-radius: 25px 0 0 0;")
   )))

@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 .widgets, .clickable, .clickable-active, .title {
-    background-color: #222222;
+    background-color: $LighterBg;
     padding: 0 20px 0 20px;
     border-radius: 20px;
     font-size: 15px;
@@ -13,7 +15,7 @@
 }
 
 .clickable-active:hover, .clickable:hover {
-    background-color: #222222;
+    background-color: $HoverBg;
     background-repeat: no-repeat;
 }
 
@@ -32,23 +34,23 @@
 
 @keyframes ripple {
     from {
-	background-image: radial-gradient(circle, #5a5a5a 88%, transparent 20%);
+	background-image: radial-gradient(circle, $Ripple 88%, transparent 20%);
 	background-size: 0%;
 	background-position: center;
     }
 
     95% {
-	background-image: radial-gradient(circle, #5a5a5a 88%, transparent 20%);
+	background-image: radial-gradient(circle, $Ripple 88%, transparent 20%);
 	background-size: 120%;
 	background-position: center;
     }
 
     99% {
-	background-color: #5a5a5a;
+	background-color: $Ripple;
     }
 
     to {
 	background-image: none;
-	background-color: #222222;
+	background-color: $HoverBg;
     }
 }

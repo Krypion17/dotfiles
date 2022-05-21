@@ -15,7 +15,7 @@ import Text.PrettyPrint.Annotated (Span(spanAnnotation))
 import System.Process (spawnCommand)
 
 autostart = do
-    spawn "picom"
+    spawn "picom -f --experimental-backends --config ~/.config/picom/picom.conf"
     spawn "~/.fehbg"
 --    spawn "bash ~/.config/polybar/launch.sh --shapes"
     spawn "NOTIFIED=0"
@@ -39,8 +39,8 @@ layouts = spacing 10 $ gaps [(L,10), (R,10), (U,10), (D,10)] $ avoidStruts (tall
 defaults = def { modMask = mod4Mask,
     terminal = "kitty",
     borderWidth = 5,
-    normalBorderColor = "#225544",
-    focusedBorderColor = "#55ccaa",
+    normalBorderColor = "#727272",
+    focusedBorderColor = "#c5c5c5",
     startupHook = autostart,
     layoutHook = layouts
 }
@@ -53,6 +53,7 @@ main = xmonad $ docks $ defaults
       ("<XF86AudioRaiseVolume>", spawn "amixer -D pulse sset Master 5%+ && ~/.config/eww/scripts/widgets/volume.sh"),
       ("<XF86AudioMute>", spawn "amixer -D pulse set Master 1+ toggle && ~/.config/eww/scripts/widgets/volume.sh"),
       ("M-C-<Return>", spawn "playerctl play-pause"),
+      ("M-<Return>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"),
       ("M-s", sendMessage ToggleStruts),
       ("M-e", spawn "eww daemon"),
       ("M-S-e", spawn "pkill eww"),

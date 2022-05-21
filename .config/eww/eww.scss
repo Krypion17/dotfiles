@@ -1,27 +1,31 @@
+// Imports
 @use "./css/volumepop.scss";
 @use "./css/widgets.scss";
 @use "./css/calendar.scss";
+@import "./css/variables.scss";
 
+// Global stuff
 * {
     min-height: 25px;
     all: unset;
-    color: #d1d1d1;
+    color: $Foreground;
 }
 
 window {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     font-family: "SpaceMono Nerd Font";
 }
 
 .container {
-    background-color: #111111;
+    background-color: $Background;
     padding: 8px;
     padding-top: 5px;
 }
 
 .round {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     min-height: 25px;
     min-width: 25px;
+    box-shadow: 0 -30px 0 0 $Background;
 }
 
