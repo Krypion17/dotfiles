@@ -20,6 +20,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'ap/vim-css-color'
+Plug 'LnL7/vim-nix'
 
 call plug#end()
 

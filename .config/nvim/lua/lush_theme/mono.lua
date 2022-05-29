@@ -15,6 +15,7 @@ local theme = lush(function ()
         Identifier { fg = base.ro(-40).sa(60) },
         Comment { fg = basefg.ro(-30).sa(20).da(50), gui = "italic" },
         Error { bg = basebg, fg = hsl("#fc5876"), gui = "underline" },
+        Special { fg = Constant.fg.ro(30).sa(40) },
 
         -- Vim ui
         Normal { fg = basefg },
