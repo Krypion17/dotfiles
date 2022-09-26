@@ -17,9 +17,32 @@
     discord
     ventoy-bin
     eww
+    rofi
+    picom
+    lxappearance
+    # haskellPackages.xmonad haskellPackages.xmonad-contrib xdotool
     neofetch
     flameshot
     wine
+    grapejuice
+    spotify
+    spotdl
+    ytmdl
+    element-desktop
+    #aseprite-unfree
+    feh
+    #lutris
+    baobab
+    lightly-qt
+    # latte-dock
+    amberol
+    blanket
+    kcalc
+    libreoffice
+    minecraft
+    playerctl
+    inkscape
+    opendrop
   ];
 
   # This value determines the Home Manager release that your

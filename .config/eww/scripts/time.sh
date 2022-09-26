@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 hour=$(date +%I)
 hour=${hour#0}

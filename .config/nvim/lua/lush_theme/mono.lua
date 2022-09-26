@@ -10,12 +10,14 @@ local theme = lush(function ()
     return {
         -- Text
         Statement { fg = base.ro(10), gui = "bold" },
+        Operator { fg = Statement.fg, gui = "" },
         Type { fg = base.ro(130).li(40) },
         Constant { fg = base.sa(30).ro(-230) },
         Identifier { fg = base.ro(-40).sa(60) },
         Comment { fg = basefg.ro(-30).sa(20).da(50), gui = "italic" },
         Error { bg = basebg, fg = hsl("#fc5876"), gui = "underline" },
         Special { fg = Constant.fg.ro(30).sa(40) },
+        CocHintSign { fg = Comment.fg, gui = Comment.gui, bg = basebg },
 
         -- Vim ui
         Normal { fg = basefg },
@@ -25,6 +27,12 @@ local theme = lush(function ()
         CursorLine { bg = basebg.li(10).sa(-20) },
 
         Cursor { bg = hsl("#dddddd") },
+
+        Pmenu { Normal },
+        PmenuSel { bg = Cursor.bg.sa(40).ro(-140) },
+        CocPum { Pmenu },
+        CocMenuSel { PmenuSel },
+
 
         -- Plugins
         IndentBlanklineChar { fg = basefg.saturate(10).darken(60) },

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 title=$(xdotool getwindowfocus getwindowname)
 

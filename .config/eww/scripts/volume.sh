@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-volumelev=$(awk -F"[][]" '/Mono:/ { print $2 }' <(amixer -c 0 get Master | sed 's/%//'))
+volumelev=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer get Master | sed 's/%//'))
 volumelev=$((volumelev))
 
 if [[ "$1" == "--icon" ]] ; then

@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-batteryper=$(cat /sys/class/power_supply/BAT1/capacity)
+batteryper=$(cat /sys/class/power_supply/BAT0/capacity)
 
 (( batteryperround = (batteryper+4)/10, batteryperround *= 10 ))
 
-batstatus=$(cat /sys/class/power_supply/BAT1/status)
+batstatus=$(cat /sys/class/power_supply/BAT0/status)
 
 Charging=("", "", "", "", "", "", "", "", "", "")
 

@@ -49,8 +49,8 @@ main :: IO ()
 main = xmonad $ docks $ defaults
   `additionalKeysP`
     [ ("M-S-s", spawn "flameshot gui"),
-      ("<XF86AudioLowerVolume>", spawn "amixer -D pulse sset Master 5%- && ~/.config/eww/scripts/widgets/volume.sh"),
-      ("<XF86AudioRaiseVolume>", spawn "amixer -D pulse sset Master 5%+ && ~/.config/eww/scripts/widgets/volume.sh"),
+      ("<XF86AudioLowerVolume>", spawn "amixer sset Master 5%- && ~/.config/eww/scripts/widgets/volume.sh"),
+      ("<XF86AudioRaiseVolume>", spawn "amixer sset Master 5%+ && ~/.config/eww/scripts/widgets/volume.sh"),
       ("<XF86AudioMute>", spawn "amixer -D pulse set Master 1+ toggle && ~/.config/eww/scripts/widgets/volume.sh"),
       ("M-C-<Return>", spawn "playerctl play-pause"),
       ("M-<Return>", spawn "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"),
