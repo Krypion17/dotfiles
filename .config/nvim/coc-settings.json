@@ -26,7 +26,6 @@
         }
       }
     },
-    "rust-analyzer.enable": true,
     "suggest.completionItemKindLabels": {
         "method": "  ",
         "function": "  ",
